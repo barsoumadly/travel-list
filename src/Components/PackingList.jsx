@@ -7,7 +7,7 @@ export function PackingList({ items, deleteItem, selectItem, cleanItems }) {
 
   if (sortBy === "description")
     sortItems.sort((a, b) => a.itemName.localeCompare(b.itemName));
-  else sortItems.sort((a, b) => Number(a.packed) - Number(b.packed));
+  else sortItems.sort((a, b) => Number(a.isPacked) - Number(b.isPacked));
   return (
     <div className="list">
       <ul>
